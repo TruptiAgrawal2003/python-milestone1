@@ -1,0 +1,89 @@
+# Q1. Check if a number is Positive, Negative or Zero
+num1 = int(input("Enter a number: "))
+if num1 > 0:
+    print(f"{num1} is a positive number")
+elif num1 < 0:
+    print(f"{num1} is a negative number")
+else:
+    print(f"{num1} is zero")
+
+# Q2. Check if a number is Odd or Even
+num1 = int(input("Enter a number: "))
+if num1 % 2 == 0:
+    print(f"{num1} is an even number")
+else:
+    print(f"{num1} is an odd number")
+
+# Q3. Same last digit check
+num1 = int(input("Enter first non-negative number: "))
+num2 = int(input("Enter second non-negative number: "))
+if num1 % 10 == num2 % 10:
+    print("Last digit is same")
+else:
+    print("Last digit is not same")
+
+# Q4. Print numbers from 1 to 10 in a single row
+for i in range(1, 11):
+    print(f"{i} ", end=" ")
+print()
+
+# Q5. Print even numbers between 23 and 57
+for i in range(23, 58):
+    if i % 2 == 0:
+        print(f"{i}")
+
+# Q6. Check if a number is prime
+import math
+flag = 1
+num1 = int(input("Enter the number: "))
+for i in range(2, round(math.sqrt(num1)) + 1):
+    if num1 % i == 0:
+        print(f"{num1} is not a prime number")
+        flag = 0
+        break
+if flag == 1:
+    print(f"{num1} is a prime number")
+
+# Q7. Print prime numbers between 10 and 99
+for j in range(10, 100):
+    flag = 1
+    for i in range(2, int(math.sqrt(j)) + 1):
+        if j % i == 0:
+            flag = 0
+            break
+    if flag == 1:
+        print(j)
+
+# Q8. Sum of all digits
+num = int(input("Enter a number: "))
+sum1 = 0
+num1 = num
+while num1 > 0:
+    digit = num1 % 10
+    sum1 += digit
+    num1 = num1 // 10
+print(f"Sum of digits of {num} is {sum1}")
+
+# Q9. Reverse a number
+num = int(input("Enter a number: "))
+rev = 0
+num1 = num
+while num1 > 0:
+    digit = num1 % 10
+    rev = 10 * rev + digit
+    num1 = num1 // 10
+print(f"Reverse of {num} is {rev}")
+
+# Q10. Check if number is palindrome
+num = int(input("Enter a number: "))
+rev = 0
+num1 = num
+while num1 > 0:
+    digit = num1 % 10
+    rev = 10 * rev + digit
+    num1 = num1 // 10
+if rev == num:
+    print("Yes, it is a palindrome number")
+else:
+    print("No, it is not a palindrome number")
+
