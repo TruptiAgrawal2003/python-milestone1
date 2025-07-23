@@ -1,0 +1,23 @@
+from collections import Counter
+
+def calculate_meeting_time_and_place(file_path):
+    with open(file_path, 'r') as f:
+        lines = f.readlines()
+    
+    time = len(lines)
+    if time > 12:
+        time -= 12
+        meridian = "PM"
+    else:
+        meridian = "AM"
+
+    all_words = ' '.join(lines).lower().split()
+    cleaned_words = [word.strip('.,!?;:()[]{}"\'') for word in all_words]
+    word_freq = Counter(cleaned_words)
+    most_common_word = word_freq.most_common(1)[0][0].capitalize()
+
+    print(f"Meeting time: {time} {meridian}")
+    print(f"Meeting place: {most_common_word} Street")
+
+file_path = input("Enter file path: ")
+calculate_meeting_time_and_place(file_path)
