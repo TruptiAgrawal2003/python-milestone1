@@ -1,0 +1,33 @@
+# 1. Create a list of 5 integers and display the list items. Access individual elements through index.
+lst = [10, 20, 30, 40, 50]
+print(lst)
+print(lst[0], lst[1], lst[2], lst[3], lst[4])
+
+# 2. Append a new item to the end of the list.
+lst.append(60)
+print(lst)
+
+# 3. Reverse the order of the items in the list.
+lst.reverse()
+print(lst)
+
+# 4. Print the number of occurrences of a specified element in a list.
+print(lst.count(20))
+
+# 5. Append the items of list1 to list2 in the front.
+list1 = [1, 2, 3]
+list2 = [4, 5]
+list2[:0] = list1
+print(list2)
+
+# 6. Insert a new item before the second element in an existing list.
+lst.insert(1, 25)
+print(lst)
+
+# 7. Remove the item from a specified index in a list.
+del lst[2]
+print(lst)
+
+# 8. Remove the first occurrence of a specified element from a list.
+lst.remove(40)
+print(lst)
