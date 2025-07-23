@@ -1,1 +1,9 @@
+def count_alex_simple(text_string):
+ normalized_string = text_string.lower()
+ target_name = "alex"
+ count = normalized_string.count(target_name)
+ return count
 
+s=input("Enter the string")
+x=count_alex_simple(s)
+print(x)
