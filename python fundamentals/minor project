@@ -1,0 +1,28 @@
+# MINI PROJECT 1 - Travel Suggestion
+distance = int(input("How far would you like to travel in miles? "))
+if distance < 3:
+    print("I suggest Bicycle to your destination")
+elif distance >= 3 and distance < 300:
+    print("I suggest Motor-cycle to your destination")
+else:
+    print("I suggest Super-Car to your destination")
+  
+
+# MINI PROJECT 2 - Server Hosting Cost Calculation
+print("\nHost Provider charges $0.51 per hour")
+
+print("1. Cost to operate one server per day:")
+day = 0.51 * 24
+print(f"${day:.2f}")
+
+print("2. Cost to operate one server per week:")
+week = day * 7
+print(f"${week:.2f}")
+
+print("3. Cost to operate one server per month:")
+month = week * 4
+print(f"${month:.2f}")
+
+print("4. Days I can operate one server with $918:")
+days = (1 / day) * 918
+print(f"{days:.2f} days")
