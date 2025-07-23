@@ -1,0 +1,40 @@
+#People and facts
+
+import random
+
+people_facts = {
+    "Jeff": "Is afraid of Dogs.",
+    "David": "Plays the piano.",
+    "Jason": "Can fly an airplane."
+}
+
+print("Original list:")
+for person, fact in people_facts.items():
+    print(f"{person}: {fact}")
+print()
+
+people_facts["Jeff"] = "Is afraid of heights."
+people_facts["Jill"] = "Can hula dance."
+
+print("Updated list (order may change):")
+items = list(people_facts.items())
+random.shuffle(items)
+for person, fact in items:
+    print(f"{person}: {fact}")
+    
+
+#Find the percentage
+students = {
+    "Krishna": [67, 68, 69],
+    "Arjun": [70, 98, 63],
+    "Malika": [52, 56, 60]
+}
+
+name = input("Enter a name: ")
+marks = students.get(name)
+
+if marks:
+    average = sum(marks) / len(marks)
+    print(f"Average percentage mark: {int(average)}")
+else:
+    print("Student not found.")
