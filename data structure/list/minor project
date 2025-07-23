@@ -1,0 +1,13 @@
+#Runner up score
+num=int(input("Enter the number of scores:"))
+l=[]
+for i in range(num):
+    score=int(input())
+    l.append(score)
+
+max_score=max(l)
+second_max=-1
+for i in range(num):
+    if max_score>l[i] and second_max<l[i]:
+        second_max=l[i]
+print(second_max)
