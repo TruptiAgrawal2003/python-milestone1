@@ -1,0 +1,41 @@
+# Sort Colors
+def sort_colors(s):
+    l=s.split("_")
+    l.sort()
+    s="_".join(l)
+    return s
+s=input("Enter the string either in upper case or lower case with hypen seperated\n")
+x=sort_colors(s)
+print(x)
+
+
+## Create a Python module with the following functions:
+#namemodule
+
+def ispalindrome(name):
+    return name == name[::-1]
+
+def count_the_vowels(name):
+    vowels = "aeiouAEIOU"
+    return sum(1 for ch in name if ch in vowels)
+
+def frequency_of_letters(name):
+    freq = {}
+    for ch in name:
+        freq[ch] = freq.get(ch, 0) + 1
+    return freq
+
+import namemodule
+
+name = "bob"
+
+if namemodule.ispalindrome(name):
+    print("Yes it is a palindrome.")
+else:
+    print("No it is not a palindrome.")
+
+print("No of vowels:", namemodule.count_the_vowels(name))
+
+freq = namemodule.frequency_of_letters(name)
+print("Frequency of letters:", end=" ")
+print(", ".join(f"{ch}-{count}" for ch, count in freq.items()))
